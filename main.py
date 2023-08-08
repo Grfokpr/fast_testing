@@ -35,6 +35,10 @@ class Numbers(BaseModel):
     num2: float
 
 
+@app.post("/get")
+def add_numbers():
+    return {"result": 'YEEEH'}
+
 @app.post("/add")
 def add_numbers(numbers: Numbers):
     result = numbers.num1 + numbers.num2
